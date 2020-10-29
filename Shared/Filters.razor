@@ -1,0 +1,24 @@
+﻿<div class="filters_wp">
+    <div class="filters_inner_wp">
+        <div class="filter_option"><label for="fulltime">Full Time Only</label><input id="fulltime" type="checkbox" value="false"></div>
+        <div class="filters_location">
+            <h1>Location</h1>
+            <div class="filters_location_search">
+                <svg class="svg_icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
+                </svg>
+                <input type="text" placeholder="City, state, zip code or country" value="">
+            </div>
+        </div>
+        <div class="filter_option"><label for="london">London</label><input id="london" type="checkbox" value="london" @onclick="@(() => OnClick.InvokeAsync("London"))"></div>
+        <div class="filter_option"><label for="amsterdam">Amsterdam</label><input id="amsterdam" type="checkbox" value="amsterdam" @onclick="@(() => OnClick.InvokeAsync("Amsterdam"))"></div>
+        <div class="filter_option"><label for="new+york">New York</label><input id="new+york" type="checkbox" value="new+york" @onclick="@(() => OnClick.InvokeAsync("New+York"))"></div>
+        <div class="filter_option"><label for="berlin">Berlin</label><input id="berlin" type="checkbox" value="berlin" @onclick="@(() => OnClick.InvokeAsync("Berlin"))"></div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter] public EventCallback<string> OnClick { get; set; }
+
+}
