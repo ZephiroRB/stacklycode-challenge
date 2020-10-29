@@ -1,0 +1,5 @@
+﻿<linker>
+  <assembly fullname="stacklycode-challenge">
+    <type fullname="*" required="true" />
+  </assembly>
+</linker>
